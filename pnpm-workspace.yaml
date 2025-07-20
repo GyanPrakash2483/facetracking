@@ -1,0 +1,8 @@
+onlyBuiltDependencies:
+  - '@heroui/shared-utils'
+  - '@tailwindcss/oxide'
+  - '@tensorflow/tfjs-node'
+  - canvas
+  - core-js
+  - sharp
+  - unrs-resolver
