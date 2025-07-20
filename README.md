@@ -1,5 +1,5 @@
 
-# Face Tracking & Recording App – Technical Report
+# Face Tracking & Recording App
 
 ## 🧠 Technologies Used
 
