@@ -2,6 +2,7 @@
 
 import { Button, Switch } from '@mui/material'
 import * as faceapi from 'face-api.js'
+import { LoaderIcon } from 'lucide-react'
 import { useEffect, useState, useRef } from 'react'
 
 const loadFaceDetectionModels = async () => {
@@ -9,6 +10,9 @@ const loadFaceDetectionModels = async () => {
   await faceapi.loadFaceExpressionModel('/models')
   await faceapi.loadFaceLandmarkModel('/models')
   await faceapi.loadSsdMobilenetv1Model('/models')
+
+  const modelsLoading = document.querySelector('#models-loading')
+  modelsLoading.hidden = true
 }
 
 const streamUserVideo = async (landmarkEnabledRef, expressionEnabledRef) => {
@@ -223,7 +227,12 @@ export default function App() {
 
   return (
     <div className='max-w-[480px] mx-auto mt-2'>
-
+      <div className='text-3xl flex flex-col items-center justify-center w-full' id='models-loading'>
+        <div className='flex gap-2 items-center'>
+          Loading... <LoaderIcon className='animate-spin' />
+        </div>
+        <p className='text-sm'>This may take a long time when loading for the first time.</p>
+      </div>
       <canvas id="live-video-feed"></canvas>
       <div className='options-container w-full p-2'>
         <h2 className='text-xl'> Options </h2>
