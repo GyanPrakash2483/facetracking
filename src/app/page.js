@@ -26,10 +26,10 @@ export default function Home() {
         </p>
         <ul className="list-disc list-inside">
           <li>Uses <code>face-api.js</code> to detect faces, facial landmarks, and facial expressions.</li>
-          <li>Streams user's webcam video onto a <code>&lt;canvas&gt;</code> element.</li>
+          <li>Streams user&apos;s webcam video onto a <code>&lt;canvas&gt;</code> element.</li>
           <li>Overlays detection visuals (bounding boxes, landmarks, expressions) on the canvas.</li>
           <li>Records the processed canvas stream using the <code>MediaRecorder</code> API.</li>
-          <li>Allows saving of the recording to Local file system (.mp4 file), browser's <code>localStorage</code> as base64 (as required in the spec).</li>
+          <li>Allows saving of the recording to Local file system (.mp4 file), browser&apos;s <code>localStorage</code> as base64 (as required in the spec).</li>
           <li>Displays previously saved recordings on reload (if available in <code>localStorage</code>).</li>
         </ul>
 
@@ -76,7 +76,7 @@ export default function Home() {
 
         <h3 className='text-xl mt-3 mb-2 ml-1'> Real-Time Face Detection </h3>
         <ul className="list-disc list-inside">
-          <li>Streams live video from the user's webcam onto a <code>&lt;canvas&gt;</code> element.</li>
+          <li>Streams live video from the user&apos;s webcam onto a <code>&lt;canvas&gt;</code> element.</li>
           <li>Uses <code>face-api.js</code> to detect all visible faces in real-time.</li>
         </ul>
 
